@@ -1,0 +1,68 @@
+.customers-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+.customers-card {
+  width: 800px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.customers-title {
+  margin-bottom: 20px;
+}
+
+.add-customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.add-customer-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.customer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.customer-list-item {
+  background: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+}
+
+.delete-btn {
+  padding: 6px 14px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}

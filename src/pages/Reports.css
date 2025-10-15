@@ -1,0 +1,48 @@
+.reports-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+.reports-card {
+  width: 800px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.reports-title {
+  background: #8e44ad;
+  margin-bottom: 20px;
+}
+
+.reports-desc {
+  color: #44ad60;
+  margin-bottom: 24px;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.report-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.download-report-btn {
+  padding: 12px;
+  background: #8e44ad;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
