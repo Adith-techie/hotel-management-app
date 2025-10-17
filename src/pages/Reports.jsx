@@ -34,7 +34,7 @@ export default function Reports({ onLogout }) {
         <div className="reports-card">
           <h2 className="reports-title">📊 Reports</h2>
           <p className="reports-desc">
-            View hotel analytics: revenue, occupancy rates, and performance reports.
+           📈 Generate detailed reports and insights in a click.
           </p>
           <form className="report-form" onSubmit={handleDownload}>
             <input

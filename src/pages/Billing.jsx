@@ -32,6 +32,9 @@ export default function Billing({ onLogout }) {
       <div className="billing-container">
         <div className="billing-card">
           <h2 className="billing-title">💳 Billing</h2>
+          <p className="billing-desc">
+           ⚡Fast, seamless billing for your hotel guests.
+          </p>
           <form onSubmit={handleAddBill} className="billing-form">
             <input
               type="text"

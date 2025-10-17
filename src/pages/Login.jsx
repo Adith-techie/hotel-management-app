@@ -28,7 +28,7 @@ export default function Login({ onLogin }) {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h2>🏨 Hotel Management</h2>
+        <h2> Hotel Management</h2>
         <form onSubmit={handleLogin}>
           <input
             type="email"

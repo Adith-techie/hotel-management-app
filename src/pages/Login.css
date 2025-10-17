@@ -1,7 +1,8 @@
+/* Login.css */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #6a5acd, #8a2be2);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,62 +11,73 @@ body {
 
 .login-container {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .login-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 15px;
-  padding: 40px;
-  width: 320px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 60px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 420px; /* wider for desktop */
+  max-width: 90%;
   text-align: center;
-  color: #fff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .login-card h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #333;
 }
 
 .login-card input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
   outline: none;
-  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #8a2be2;
 }
 
 .login-card button {
   width: 100%;
-  padding: 12px;
-  margin-top: 15px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  font-size: 15px;
+  padding: 14px;
+  background: linear-gradient(90deg, #6a5acd, #8a2be2);
+  color: white;
   font-weight: bold;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
+  font-size: 15px;
 }
 
 .login-card button:hover {
-  transform: scale(1.05);
+  background: linear-gradient(90deg, #8a2be2, #6a5acd);
+  transform: translateY(-1px);
 }
 
 .signup-text {
   margin-top: 15px;
-  font-size: 13px;
+  color: #666;
+  font-size: 14px;
 }
+
 .signup-text a {
-  color: #fff;
-  font-weight: bold;
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-text a:hover {
   text-decoration: underline;
 }

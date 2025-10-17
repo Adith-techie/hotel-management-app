@@ -34,7 +34,10 @@ export default function Rooms({ onLogout }) {
       <Header onLogout={onLogout} />
       <div className="rooms-container">
         <div className="rooms-card">
-          <h2 className="rooms-title">🛏️ Rooms</h2>
+         <h2 className="rooms-title">🔑 Rooms</h2>
+          <p className="rooms-desc">
+           🧾 Keep every room organized — from type to availability.
+          </p>
 
           {/* Add Room Form */}
           <form onSubmit={addRoom} className="add-room-form">

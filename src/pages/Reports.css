@@ -17,6 +17,9 @@
 .reports-title {
   background: #8e44ad;
   margin-bottom: 20px;
+    color: #fff;
+  padding: 8px 12px;     
+  border-radius: 8px;
 }
 
 .reports-desc {
@@ -45,4 +48,5 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+   margin-top: 20px;
 }

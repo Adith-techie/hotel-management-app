@@ -37,8 +37,10 @@ export default function Dashboard({ onLogout }) {
       <Header onLogout={onLogout} />
       <div className="dashboard-container">
         <div className="dashboard-card">
-          <h2 className="dashboard-title">🏨 Dashboard</h2>
-
+          <h2 className="dashboard-title">🌐 Dashboard</h2>
+        <p className="dashboard-desc">
+            ⚙️ Manage your hotel info and operations in one clean dashboard.
+          </p>
           {/* Image Section */}
           <div className="hotel-image-section">
             <h3>Hotel Image</h3>

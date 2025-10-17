@@ -12,7 +12,7 @@ export default function Header({ onLogout }) {
 
   return (
     <header className="header">
-      <div className="logo">🏨 Hotel Management</div>
+      <div className="logo"> Hotel Management</div>
       <nav className="nav-links">
         <NavLink to="/dashboard" className="nav-item">
           Dashboard

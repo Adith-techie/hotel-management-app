@@ -15,7 +15,19 @@
 }
 
 .customers-title {
+  display: block;       /* ensure it fills the line like reports title */
+  width: 100%;          /* span the card width */
+  box-sizing: border-box; 
   margin-bottom: 20px;
+  background-color: #8e44ad;
+  color: #fff;
+  padding: 8px 12px;     
+  border-radius: 8px;
+}
+
+.customers-desc {
+  color: #44ad60;
+  margin-bottom: 32px;
 }
 
 .add-customer-form {
@@ -33,12 +45,13 @@
 
 .add-btn {
   padding: 12px;
-  background: #3498db;
+  background: #8e44ad;
   color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+   margin-top: 20px;
 }
 
 .customer-list {
@@ -47,7 +60,7 @@
 }
 
 .customer-list-item {
-  background: #f9f9f9;
+  background: #00f7ff;
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 8px;

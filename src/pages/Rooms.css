@@ -16,6 +16,15 @@
 
 .rooms-title {
   margin-bottom: 20px;
+  background-color: #8e44ad;
+    color: #fff;
+  padding: 8px 12px;     
+  border-radius: 8px;
+}
+
+.rooms-desc {
+  color: #44ad60;
+  margin-top: 20px;
 }
 
 .add-room-form {
@@ -39,6 +48,7 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+   margin-top: 20px;
 }
 
 .room-list {

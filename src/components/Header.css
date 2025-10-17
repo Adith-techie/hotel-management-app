@@ -8,8 +8,8 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin-bottom: 20px; /* space outside the header */
 }
-
 .logo {
   font-size: 20px;
   font-weight: bold;

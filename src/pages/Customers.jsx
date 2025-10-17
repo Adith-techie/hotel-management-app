@@ -26,7 +26,9 @@ export default function Customers({ onLogout }) {
       <div className="customers-container">
         <div className="customers-card">
           <h2 className="customers-title">👥 Customers</h2>
-
+        <p className="customers-desc">
+            🔍 Keep customer records organized and accessible anytime.
+          </p>
           {/* Add Customer Form */}
           <form onSubmit={addCustomer} className="add-customer-form">
             <input
