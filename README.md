@@ -11,43 +11,41 @@
   <img src="https://img.shields.io/badge/Status-Active-brightgreen" />
 </p>
 
----
 
 ## 📘 Overview
 The **Hotel Management System** is a feature-rich, responsive web application designed to simplify daily hotel operations such as room management, customer record maintenance, billing, and generating analytical reports.  
 This system provides a clean dashboard interface with easy navigation and smooth user experience.
 
----
 
-## 🚀 Features
+## Features
 
-### 🏠 Dashboard
+### Dashboard
 - Centralized overview of hotel operations  
 - Manage hotel details and upload images  
 - Clean, desktop-style UI  
 
-### 👥 Customers
+### Customers
 - Add, edit, and delete customers  
 - Assign rooms  
 - Search and manage records  
 
-### 🛏️ Rooms
+### Rooms
 - Add rooms with type & price  
 - Toggle availability (Available/Occupied)  
 - Delete room entries  
 
-### 💵 Billing
+### Billing
 - Auto-generate bills  
 - Calculate total stay cost  
 - Manage and delete billing records  
 
-### 📊 Reports
+### Reports
 - Generate and download customer stay reports  
 - Helpful for management and analysis  
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Area | Technology |
 |------|------------|
@@ -59,7 +57,7 @@ This system provides a clean dashboard interface with easy navigation and smooth
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 src/
 │── components/
 │── pages/
@@ -70,7 +68,7 @@ public/
 vite.config.js
 package.json
 
-## 📦 Installation
+## Installation
 
 ### Clone Repository
 ```bash
