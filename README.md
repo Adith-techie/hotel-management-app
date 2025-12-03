@@ -72,9 +72,9 @@ package.json
 
 ## 📦 Installation
 
-### 1️⃣ Clone Repository
+### Clone Repository
 ```bash
-git clone https://github.com/your-username/hotel-management-app.git
+git clone https://github.com/Adith-techie/hotel-management-app.git
 cd hotel-management-app
 
 npm install
