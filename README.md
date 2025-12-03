@@ -1,4 +1,4 @@
-<h1 align="center">🏨 Hotel Management System</h1>
+<h1 align="center">Hotel Management System</h1>
 <p align="center">
   A modern, responsive hotel management application built using <strong>React + Vite</strong>.
 </p>
@@ -12,7 +12,7 @@
 </p>
 
 
-## 📘 Overview
+## Overview
 The **Hotel Management System** is a feature-rich, responsive web application designed to simplify daily hotel operations such as room management, customer record maintenance, billing, and generating analytical reports.  
 This system provides a clean dashboard interface with easy navigation and smooth user experience.
 
