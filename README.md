@@ -43,7 +43,25 @@ This system provides a clean dashboard interface with easy navigation and smooth
 - Generate and download customer stay reports  
 - Helpful for management and analysis  
 
----
+## Screenshots
+### Login Page
+![Login Page](./screenshots/login.png)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Customers
+![Customers](./screenshots/customers.png)
+
+### Rooms
+![Rooms](./screenshots/rooms.png)
+
+### Billing
+![Billing](./screenshots/billing.png)
+
+### Reports
+![Reports](./screenshots/reports.png)
+
 
 ## Tech Stack
 
@@ -57,35 +75,42 @@ This system provides a clean dashboard interface with easy navigation and smooth
 
 ---
 
-## Project Structure
-src/
-│── components/
-│── pages/
-│── App.jsx
-│── main.jsx
-│── index.css
-public/
-vite.config.js
-package.json
+## Installation and Setup
 
-## Installation
-
-### Clone Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/Adith-techie/hotel-management-app.git
 cd hotel-management-app
+```
 
-npm install
-npm run dev
+### Install Dependencies
 ```bash
-Future Enhancements
+npm install
+```
 
-Database integration (MongoDB / Firebase)
+### Run Development Server
+```bash
+npm run dev
+```
 
-Online booking support
+### Create Production Build
+```bash
+npm run build
+```
 
-Multi-user roles (Admin/Staff)
+### Preview Production Build
+```bash
+npm run preview
+```
 
-PDF invoice generation
+---
 
-Cloud-based storage
+## Future Enhancements
+
+- Backend database integration (MongoDB, Firebase, SQL)
+- Online room booking system
+- Multi-user roles (Admin, Manager, Staff)
+- PDF invoice generation and exporting
+- Real-time analytics dashboard and charts
+- Notification system (Email/SMS)
+- Complete booking history with filtering and search
