@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/', 
-})
+  // For normal builds (Vercel): base = '/'
+  // For GitHub Pages builds (mode = 'gh-pages'): base = '/hotel-management-app/'
+  base: mode === 'gh-pages' ? '/hotel-management-app/' : '/'
+}))
