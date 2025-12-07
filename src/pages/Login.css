@@ -1,5 +1,4 @@
-/* ...existing code... */
-/* Modern / Unique Login UI (glassmorphism + animated blobs + subtle motion) */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -18,9 +17,8 @@ html, body {
 
 * {box-sizing: border-box;}
 
-/* animated gradient / blobs background */
 body{
-  /* removed overflow: hidden; to allow other pages (dashboard) to scroll */
+ 
   min-height: 100vh;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--text);
@@ -67,7 +65,7 @@ body::after{
   100% { transform: translate3d(12%, 10%, 0) scale(1); }
 }
 
-/* container centers the card and provides perspective for subtle parallax */
+
 .login-container {
   width: 100%;
   max-width: 1120px;
@@ -79,7 +77,7 @@ body::after{
   position: relative;
   gap: 48px;
 
-  /* ensure the login page doesn't create global overflow while preserving body scroll for other pages */
+  /
   overflow: hidden;
 }
 
@@ -100,7 +98,7 @@ body::after{
   overflow: visible;
 }
 
-/* NOTE: removed the floating micro-card (::before) used for the logo/icon */
+
 
 /* gentle lift on hover for desktop */
 .login-card:hover{
@@ -108,7 +106,7 @@ body::after{
   box-shadow: 0 18px 60px rgba(2,6,23,0.65);
 }
 
-/* header - reduced top margin now that icon area is removed */
+
 .login-card h2{
   margin: 14px 0 12px;
   font-size: 22px;
@@ -132,7 +130,7 @@ body::after{
   margin-bottom: 18px;
 }
 
-/* modern inputs */
+
 .login-card input{
   width: 100%;
   padding: 14px 16px;
@@ -153,13 +151,13 @@ body::after{
   transform: translateY(-2px);
 }
 
-/* small subtle placeholder style */
+
 .login-card input::placeholder{
   color: rgba(255,255,255,0.45);
   font-weight: 500;
 }
 
-/* password show toggle space if you add one later */
+
 .login-card .actions{
   display: flex;
   gap: 12px;
@@ -167,7 +165,7 @@ body::after{
   margin-top: 6px;
 }
 
-/* primary button - glass + neon accent */
+
 .login-card button{
   width: 100%;
   padding: 12px 16px;
@@ -213,7 +211,7 @@ body::after{
   overflow: auto;
 }
 
-/* small responsive tweaks */
+
 @media (max-width: 520px){
   .login-container { padding: 28px; }
   .login-card { padding: 26px; border-radius: 14px; }
@@ -228,4 +226,3 @@ body::after{
   outline-offset: 3px;
 }
 
-/* ...existing code... */
