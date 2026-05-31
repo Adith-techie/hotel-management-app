@@ -6,40 +6,61 @@ import Customers from "./pages/Customers";
 import Rooms from "./pages/Rooms";
 import Billing from "./pages/Billing";
 import Reports from "./pages/Reports";
+import UserDashboard from "./pages/UserDashboard";
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [auth, setAuth] = useState({ isAuthenticated: false, role: null });
 
   useEffect(() => {
     const authStatus = localStorage.getItem("isAuthenticated");
-    if (authStatus === "true") {
-      setIsAuthenticated(false); //loogin
+    const storedRole = localStorage.getItem("userRole");
+
+    if (authStatus === "true" && ["admin", "user"].includes(storedRole)) {
+      setAuth({ isAuthenticated: true, role: storedRole });
     }
   }, []);
 
-  const handleLogin = () => {
-    setIsAuthenticated(true);
+  const handleLogin = (role) => {
+    localStorage.setItem("isAuthenticated", "true");
+    localStorage.setItem("userRole", role);
+    setAuth({ isAuthenticated: true, role });
   };
 
   const handleLogout = () => {
     localStorage.removeItem("isAuthenticated");
-    setIsAuthenticated(false);
+    localStorage.removeItem("userRole");
+    setAuth({ isAuthenticated: false, role: null });
   };
+
+  if (!auth.isAuthenticated) {
+    return (
+      <Routes>
+        <Route path="/*" element={<Login onLogin={handleLogin} />} />
+      </Routes>
+    );
+  }
+
+  if (auth.role === "user") {
+    return (
+      <Routes>
+        <Route
+          path="/user-dashboard"
+          element={<UserDashboard onLogout={handleLogout} />}
+        />
+        <Route path="*" element={<Navigate to="/user-dashboard" replace />} />
+      </Routes>
+    );
+  }
 
   return (
     <Routes>
-      {!isAuthenticated ? (
-        <Route path="/*" element={<Login onLogin={handleLogin} />} />
-      ) : (
-        <>
-          <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
-          <Route path="/customers" element={<Customers onLogout={handleLogout} />} />
-          <Route path="/rooms" element={<Rooms onLogout={handleLogout} />} />
-          <Route path="/billing" element={<Billing onLogout={handleLogout} />} />
-          <Route path="/reports" element={<Reports onLogout={handleLogout} />} />
-          <Route path="*" element={<Navigate to="/dashboard" />} />
-        </>
-      )}
+      <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
+      <Route path="/customers" element={<Customers onLogout={handleLogout} />} />
+      <Route path="/rooms" element={<Rooms onLogout={handleLogout} />} />
+      <Route path="/billing" element={<Billing onLogout={handleLogout} />} />
+      <Route path="/reports" element={<Reports onLogout={handleLogout} />} />
+      <Route path="/user-dashboard" element={<Navigate to="/dashboard" replace />} />
+      <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
   );
 }

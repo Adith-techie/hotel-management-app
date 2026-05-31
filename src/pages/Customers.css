@@ -1,81 +1,163 @@
 .customers-container {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: clamp(20px, 5vw, 40px);
   background: #f5f6fa;
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
 }
 
 .customers-card {
-  width: 800px;
+  width: min(100%, 800px);
   background: #fff;
-  padding: 30px;
+  padding: clamp(20px, 5vw, 30px);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .customers-title {
-  display: block;       /* ensure it fills the line like reports title */
-  width: 100%;          /* span the card width */
-  box-sizing: border-box; 
-  margin-bottom: 20px;
+  width: 100%;
+  margin: 0 0 20px;
   background-color: #8e44ad;
   color: #fff;
-  padding: 8px 12px;     
+  padding: 10px 14px;
   border-radius: 8px;
+  font-size: clamp(22px, 5vw, 28px);
 }
 
 .customers-desc {
-  color: #44ad60;
-  margin-bottom: 32px;
+  color: #2f8f4a;
+  margin: 0 0 28px;
 }
 
+
+.shared-booking-record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.record-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2f8f4a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shared-booking-record h3,
+.shared-booking-record p {
+  margin: 0;
+}
+
+.shared-booking-record p {
+  margin-top: 6px;
+  color: #4b5563;
+}
+
+.record-meta {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.record-meta strong {
+  color: #8e44ad;
+  font-size: 22px;
+}
+
+.customer-status {
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.customer-status.confirmed {
+  background: #14743f;
+}
+
+.customer-status.service {
+  background: #5b4bb7;
+}
+
+.customer-status.cancelled {
+  background: #b42318;
+}
 .add-customer-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .add-customer-form input {
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
 .add-btn {
-  padding: 12px;
+  width: fit-content;
+  min-width: 160px;
+  padding: 12px 18px;
   background: #8e44ad;
   color: #fff;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-   margin-top: 20px;
+  font-weight: 700;
+  margin-top: 8px;
 }
 
 .customer-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .customer-list-item {
-  background: #00f7ff;
+  background: #e8fbff;
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   color: #222;
+  overflow-wrap: anywhere;
 }
 
 .delete-btn {
-  padding: 6px 14px;
+  flex: 0 0 auto;
+  padding: 8px 14px;
   background: #e74c3c;
   color: #fff;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
 }
+
+@media (max-width: 560px) {
+  .add-btn,
+  .delete-btn {
+    width: 100%;
+  }
+
+  .shared-booking-record,
+  .record-meta,
+  .customer-list-item {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+

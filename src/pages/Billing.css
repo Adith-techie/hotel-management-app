@@ -1,59 +1,63 @@
 .billing-container {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: clamp(20px, 5vw, 40px);
   background: #f5f6fa;
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
 }
 
 .billing-card {
-  width: 800px;
+  width: min(100%, 800px);
   background: #fff;
-  padding: 30px;
+  padding: clamp(20px, 5vw, 30px);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .billing-title {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   background-color: #8e44ad;
   color: #fff;
-  padding: 8px 12px;     
+  padding: 10px 14px;
   border-radius: 8px;
+  font-size: clamp(22px, 5vw, 28px);
 }
 
 .billing-desc {
-  color: #44ad60;
-  margin-top: 20px;
+  color: #2f8f4a;
+  margin: 0 0 28px;
 }
 
 .billing-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .billing-form input {
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
 .add-bill-btn {
-  padding: 12px;
+  width: fit-content;
+  min-width: 160px;
+  padding: 12px 18px;
   background: #8e44ad;
   color: #fff;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-   margin-top: 20px;
+  font-weight: 700;
+  margin-top: 8px;
 }
 
 .bill-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .bill-list-item {
@@ -64,15 +68,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   color: #222;
+  overflow-wrap: anywhere;
 }
 
 .delete-bill-btn {
-  padding: 6px 14px;
+  flex: 0 0 auto;
+  padding: 8px 14px;
   background: #e74c3c;
   color: #fff;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .add-bill-btn,
+  .delete-bill-btn {
+    width: 100%;
+  }
+
+  .bill-list-item {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }

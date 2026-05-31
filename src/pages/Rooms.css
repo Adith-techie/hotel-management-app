@@ -1,89 +1,111 @@
 .rooms-container {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: clamp(20px, 5vw, 40px);
   background: #f5f6fa;
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
 }
 
 .rooms-card {
-  width: 800px;
+  width: min(100%, 800px);
   background: #fff;
-  padding: 30px;
+  padding: clamp(20px, 5vw, 30px);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .rooms-title {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   background-color: #8e44ad;
-    color: #fff;
-  padding: 8px 12px;     
+  color: #fff;
+  padding: 10px 14px;
   border-radius: 8px;
+  font-size: clamp(22px, 5vw, 28px);
 }
 
 .rooms-desc {
-  color: #44ad60;
-  margin-top: 20px;
+  color: #2f8f4a;
+  margin: 0 0 28px;
 }
 
 .add-room-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .add-room-form input {
-  padding: 10px;
+  width: 100%;
+  padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
 .add-room-btn {
-  padding: 12px;
-  background: #9d2ecc;
+  width: fit-content;
+  min-width: 150px;
+  padding: 12px 18px;
+  background: #8e44ad;
   color: #fff;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-   margin-top: 20px;
+  font-weight: 700;
+  margin-top: 8px;
 }
 
 .room-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.toggle-room-btn {
-  margin-left: 12px;
-  padding: 6px 14px;
-  background: #1cb726;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
 .room-list-item {
-  background: #00f7ff;
+  background: #e8fbff;
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   color: #222;
 }
 
+.room-list-item > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toggle-room-btn,
 .delete-room-btn {
-  margin-left: 16px;
-  padding: 6px 14px;
-  background: #e74c3c;
+  padding: 8px 14px;
   color: #fff;
-  border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.toggle-room-btn {
+  background: #1fa12a;
+}
+
+.delete-room-btn {
+  background: #e74c3c;
+}
+
+@media (max-width: 640px) {
+  .add-room-btn,
+  .toggle-room-btn,
+  .delete-room-btn {
+    width: 100%;
+  }
+
+  .room-list-item,
+  .room-list-item > span {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
