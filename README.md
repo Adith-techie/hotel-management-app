@@ -19,6 +19,10 @@ This system provides a clean dashboard interface with easy navigation and smooth
 
 ## Features
 
+## Multi user
+-Admin dashboard can manage the hotel rooms
+-customer dashboard can track their hotel rooms
+
 ### Dashboard
 - Centralized overview of hotel operations  
 - Manage hotel details and upload images  
