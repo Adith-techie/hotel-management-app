@@ -43,25 +43,6 @@ This system provides a clean dashboard interface with easy navigation and smooth
 - Generate and download customer stay reports  
 - Helpful for management and analysis  
 
-## Screenshots
-### Login Page
-![Login Page](./screenshots/login.png)
-
-### Dashboard
-![Dashboard](./screenshots/dashboard.png)
-
-### Customers
-![Customers](./screenshots/customers.png)
-
-### Rooms
-![Rooms](./screenshots/rooms.png)
-
-### Billing
-![Billing](./screenshots/billing.png)
-
-### Reports
-![Reports](./screenshots/reports.png)
-
 
 ## Tech Stack
 
@@ -109,8 +90,5 @@ npm run preview
 
 - Backend database integration (MongoDB, Firebase, SQL)
 - Online room booking system
-- Multi-user roles (Admin, Manager, Staff)
-- PDF invoice generation and exporting
-- Real-time analytics dashboard and charts
 - Notification system (Email/SMS)
 - Complete booking history with filtering and search
