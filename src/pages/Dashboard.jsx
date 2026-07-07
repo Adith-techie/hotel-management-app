@@ -69,7 +69,7 @@ export default function Dashboard({ onLogout }) {
             <div className="admin-booking-header">
               <div>
                 <h3>User Booking</h3>
-                <p>Changes here update the user dashboard immediately in this browser.</p>
+                <p>Changes here update the user dashboard immediately in this browser .</p>
               </div>
               <div className={`admin-status ${booking.status}`}>{statusLabels[booking.status]}</div>
             </div>
