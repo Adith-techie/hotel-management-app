@@ -1,0 +1,29 @@
+name: main
+
+on:
+  schedule:
+    - cron: "30 18 * * *" # runs every day at 18:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update activity file
+        run: |
+          echo "Last automated update: $(date -u)" > daily-activity.txt
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daily-activity.txt
+          git commit -m "chore: daily activity update" || exit 0
+          git push
